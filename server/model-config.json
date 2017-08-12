@@ -14,7 +14,8 @@
     ]
   },
   "User": {
-    "dataSource": "db"
+    "dataSource": "db",
+    "public": false
   },
   "AccessToken": {
     "dataSource": "db",
@@ -34,5 +35,21 @@
   "Role": {
     "dataSource": "db",
     "public": false
+  },
+  "Client": {
+    "dataSource": "mysql",
+    "public": true
+  },
+    "Match": {
+    "dataSource": "mysql",
+    "public": true
+  },
+  "Match_invitation": {
+    "dataSource": "mysql",
+    "public": true
+  },
+  "Football_field": {
+    "dataSource": "mysql",
+    "public": true
   }
 }

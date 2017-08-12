@@ -1,0 +1,29 @@
+{
+  "name": "Client",
+  "base": "User",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {},
+  "validations": [],
+  "relations": {
+    "matches": {
+      "type": "hasMany",
+      "model": "Match",
+      "foreignKey": "creatorId"
+    },
+    "invitations_sent": {
+      "type": "hasMany",
+      "model": "Match_invitation",
+      "foreignKey": "inviteeId"
+    },
+    "invitations_recieved": {
+      "type": "hasMany",
+      "model": "Match_invitation",
+      "foreignKey": "hostId"
+    }
+  },
+  "acls": [],
+  "methods": {}
+}
