@@ -7,7 +7,7 @@
   },
   "scripts": {
     "lint": "eslint server --ext .js",
-    "test": "nyc jasmine && npm run lint",
+    "test": "nyc jasmine && npm run lint && nsp check",
     "start": "node ."
   },
   "dependencies": {
