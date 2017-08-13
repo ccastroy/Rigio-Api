@@ -40,7 +40,7 @@
     "dataSource": "mysql",
     "public": true
   },
-    "Match": {
+  "Match": {
     "dataSource": "mysql",
     "public": true
   },
