@@ -5,7 +5,16 @@
   "options": {
     "validateUpsert": true
   },
-  "properties": {},
+  "properties": {
+    "imageUrl": {
+      "type": "string",
+      "required": true
+    },
+    "userId": {
+      "type": "string",
+      "required": true
+    }
+  },
   "validations": [],
   "relations": {
     "matches": {
