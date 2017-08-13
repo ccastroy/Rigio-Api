@@ -4,13 +4,13 @@
     "connector": "memory"
   },
   "mysql": {
-    "host": "localhost",
+    "host": "affisa.hn",
     "port": 3306,
     "url": "",
-    "database": "Rigio",
-    "password": "",
+    "database": "affisa11_rigio",
+    "password": "rigio",
     "name": "mysql",
-    "user": "root",
+    "user": "affisa11_rigio",
     "connector": "mysql"
   }
 }
