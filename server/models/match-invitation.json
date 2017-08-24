@@ -16,12 +16,12 @@
   "relations": {
     "host": {
       "type": "belongsTo",
-      "model": "Client",
+      "model": "user",
       "foreignKey": ""
     },
     "invitee": {
       "type": "belongsTo",
-      "model": "Client",
+      "model": "user",
       "foreignKey": ""
     },
     "match": {
@@ -31,7 +31,7 @@
     },
     "action_user": {
       "type": "belongsTo",
-      "model": "Client",
+      "model": "user",
       "foreignKey": ""
     }
   },

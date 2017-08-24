@@ -1,0 +1,40 @@
+{
+  "name": "user",
+  "plural": "users",
+  "base": "User",
+  "relations": {
+    "accessTokens": {
+      "type": "hasMany",
+      "model": "accessToken",
+      "foreignKey": "userId"
+    },
+    "identities": {
+      "type": "hasMany",
+      "model": "userIdentity",
+      "foreignKey": "userId"
+    },
+    "credentials": {
+      "type": "hasMany",
+      "model": "userCredential",
+      "foreignKey": "userId"
+    },
+    "matches": {
+      "type": "hasMany",
+      "model": "Match",
+      "foreignKey": "creatorId"
+    },
+    "invitations_sent": {
+      "type": "hasMany",
+      "model": "Match_invitation",
+      "foreignKey": "inviteeId"
+    },
+    "invitations_recieved": {
+      "type": "hasMany",
+      "model": "Match_invitation",
+      "foreignKey": "hostId"
+    }
+  },
+  "validations": [],
+  "acls": [],
+  "methods": []
+}

@@ -1,0 +1,14 @@
+{  
+    "facebook-mobile" : {
+      "provider": "facebook-token",
+      "module": "passport-facebook-token",
+      "strategy": "FacebookTokenStrategy",
+      "clientID": "841549236010978",
+      "clientSecret": "907c3a780b1cc01484ecaafb8bf7fcb4",
+      "callbackPath": "/auth/facebook-token/callback",
+      "session" : false,
+      "json":true,
+      "scope": ["email"]
+    }
+  }
+  
