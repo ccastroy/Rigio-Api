@@ -26,12 +26,12 @@
     "invitations_sent": {
       "type": "hasMany",
       "model": "Match_invitation",
-      "foreignKey": "inviteeId"
+      "foreignKey": "hostId"
     },
     "invitations_recieved": {
       "type": "hasMany",
       "model": "Match_invitation",
-      "foreignKey": "hostId"
+      "foreignKey": "inviteeId"
     }
   },
   "validations": [],
