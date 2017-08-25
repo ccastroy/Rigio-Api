@@ -13,32 +13,33 @@
       "./mixins"
     ]
   },
-  "User": {
-    "dataSource": "db",
+  "user": {
+    "dataSource": "mysql",
+    "public": true
+  },
+  "accessToken": {
+    "dataSource": "mysql",
     "public": false
   },
-  "AccessToken": {
-    "dataSource": "db",
+  "userCredential": {
+    "dataSource": "mysql",
+    "public": false
+  },
+  "userIdentity": {
+    "dataSource": "mysql",
     "public": false
   },
   "ACL": {
-    "dataSource": "db",
+    "dataSource": "mysql",
     "public": false
   },
   "RoleMapping": {
-    "dataSource": "db",
-    "public": false,
-    "options": {
-      "strictObjectIDCoercion": true
-    }
-  },
-  "Role": {
-    "dataSource": "db",
+    "dataSource": "mysql",
     "public": false
   },
-  "Client": {
+  "Role": {
     "dataSource": "mysql",
-    "public": true
+    "public": false
   },
   "Match": {
     "dataSource": "mysql",

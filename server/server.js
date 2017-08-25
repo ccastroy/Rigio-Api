@@ -5,6 +5,13 @@ var boot = require('loopback-boot');
 
 var app = module.exports = loopback();
 
+// Create an instance of PassportConfigurator with the app instance
+var PassportConfigurator = require('loopback-component-passport').PassportConfigurator;
+var passportConfigurator = new PassportConfigurator(app);
+var FacebookTokenStrategy = require('passport-facebook-token');
+
+var flash = require('express-flash');
+
 app.start = function() {
   // start the web server
   return app.listen(function() {
@@ -28,5 +35,35 @@ boot(app, __dirname, function(err) {
     app.start();
 });
 
+// Exports tables to MySql
 var dataSource = app.dataSources.Mysql;
 dataSource.autoupdate(null, function(err) { });
+
+// Load the provider configurations
+var config = {};
+try {
+  config = require('../providers.json');
+} catch (err) {
+  console.error('Please configure your passport strategy in `providers.json`.');
+  process.exit(1);
+}
+
+// We need flash messages to see passport errors
+app.use(flash());
+
+// Initialize passport
+passportConfigurator.init();
+
+// Set up related models
+passportConfigurator.setupModels({
+  userModel: app.models.user,
+  userIdentityModel: app.models.userIdentity,
+  userCredentialModel: app.models.userCredential,
+});
+// Configure passport strategies for third party auth providers
+for (var s in config) {
+  var c = config[s];
+  c.session = c.session !== false;
+  passportConfigurator.configureProvider(s, c);
+}
+

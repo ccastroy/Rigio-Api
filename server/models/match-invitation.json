@@ -16,23 +16,18 @@
   "relations": {
     "host": {
       "type": "belongsTo",
-      "model": "Client",
-      "foreignKey": ""
+      "model": "user",
+      "foreignKey": "hostId"
     },
     "invitee": {
       "type": "belongsTo",
-      "model": "Client",
-      "foreignKey": ""
+      "model": "user",
+      "foreignKey": "inviteeId"
     },
     "match": {
       "type": "belongsTo",
       "model": "Match",
-      "foreignKey": ""
-    },
-    "action_user": {
-      "type": "belongsTo",
-      "model": "Client",
-      "foreignKey": ""
+      "foreignKey": "matchId"
     }
   },
   "acls": [
