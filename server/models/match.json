@@ -6,37 +6,35 @@
     "validateUpsert": true
   },
   "properties": {
-    "name": {
+    "Name": {
       "type": "string",
       "required": true
     },
-    "description": {
+    "Description": {
       "type": "string"
     },
-    "max_players": {
+    "MaxPlayers": {
       "type": "number",
       "required": true
     },
-    "date": {
+    "Date": {
       "type": "date",
       "required": true
     }
   },
   "validations": [],
   "relations": {
-    "creator": {
+    "Creator": {
       "type": "belongsTo",
       "model": "user",
-      "foreignKey": "",
-      "required": true
+      "foreignKey": ""
     },
-    "football_field": {
+    "FootballField": {
       "type": "belongsTo",
-      "model": "Football_field",
-      "foreignKey": "",
-      "required": true
+      "model": "FootballField",
+      "foreignKey": ""
     },
-    "members": {
+    "Members": {
       "type": "hasAndBelongsToMany",
       "model": "user",
       "foreignKey": ""
@@ -48,18 +46,6 @@
       "principalType": "ROLE",
       "principalId": "$everyone",
       "permission": "DENY"
-    },
-    {
-      "accessType": "READ",
-      "principalType": "ROLE",
-      "principalId": "$authenticated",
-      "permission": "ALLOW"
-    },
-    {
-      "accessType": "WRITE",
-      "principalType": "ROLE",
-      "principalId": "$owner",
-      "permission": "ALLOW"
     }
   ],
   "methods": {}

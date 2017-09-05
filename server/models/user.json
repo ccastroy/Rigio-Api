@@ -18,133 +18,128 @@
       "model": "userCredential",
       "foreignKey": "userId"
     },
-    "matches": {
+    "Matches": {
       "type": "hasMany",
       "model": "Match",
-      "foreignKey": "creatorId"
+      "foreignKey": "CreatorId"
     },
-    "invitations_sent": {
+    "InvitationsSent": {
       "type": "hasMany",
-      "model": "Match_invitation",
-      "foreignKey": "hostId"
+      "model": "MatchInvitation",
+      "foreignKey": "HostId"
     },
-    "invitations_recieved": {
+    "InvitationsRecieved": {
       "type": "hasMany",
-      "model": "Match_invitation",
-      "foreignKey": "inviteeId"
+      "model": "MatchInvitation",
+      "foreignKey": "InviteeId"
     }
   },
   "validations": [],
   "acls": [{
     "principalType": "ROLE",
-    "principalId": "$authenticated",
+    "principalId": "$owner",
     "permission": "ALLOW",
-    "property": "count"
+    "property": "__get__Matches"
   },{
     "principalType": "ROLE",
     "principalId": "$owner",
     "permission": "ALLOW",
-    "property": "__get__matches"
+    "property": "__create__Matches"
   },{
     "principalType": "ROLE",
     "principalId": "$owner",
     "permission": "ALLOW",
-    "property": "__create__matches"
+    "property": "__delete__Matches"
   },{
     "principalType": "ROLE",
     "principalId": "$owner",
     "permission": "ALLOW",
-    "property": "__delete__matches"
+    "property": "__findById__Matches"
   },{
     "principalType": "ROLE",
     "principalId": "$owner",
     "permission": "ALLOW",
-    "property": "__findById__matches"
+    "property": "__updateById__Matches"
   },{
     "principalType": "ROLE",
     "principalId": "$owner",
     "permission": "ALLOW",
-    "property": "__updateById__matches"
+    "property": "__destroyById__Matches"
   },{
     "principalType": "ROLE",
     "principalId": "$owner",
     "permission": "ALLOW",
-    "property": "__destroyById__matches"
+    "property": "__count__Matches"
   },{
     "principalType": "ROLE",
     "principalId": "$owner",
     "permission": "ALLOW",
-    "property": "__count__matches"
+    "property": "__get__InvitationsSent"
   },{
     "principalType": "ROLE",
     "principalId": "$owner",
     "permission": "ALLOW",
-    "property": "__get__invitations_sent"
+    "property": "__create__InvitationsSent"
   },{
     "principalType": "ROLE",
     "principalId": "$owner",
     "permission": "ALLOW",
-    "property": "__create__invitations_sent"
+    "property": "__delete__InvitationsSent"
   },{
     "principalType": "ROLE",
     "principalId": "$owner",
     "permission": "ALLOW",
-    "property": "__delete__invitations_sent"
+    "property": "__findById__InvitationsSent"
   },{
     "principalType": "ROLE",
     "principalId": "$owner",
     "permission": "ALLOW",
-    "property": "__findById__invitations_sent"
+    "property": "__updateById__InvitationsSent"
   },{
     "principalType": "ROLE",
     "principalId": "$owner",
     "permission": "ALLOW",
-    "property": "__updateById__invitations_sent"
+    "property": "__destroyById__InvitationsSent"
   },{
     "principalType": "ROLE",
     "principalId": "$owner",
     "permission": "ALLOW",
-    "property": "__destroyById__invitations_sent"
+    "property": "__count__InvitationsSent"
   },{
     "principalType": "ROLE",
     "principalId": "$owner",
     "permission": "ALLOW",
-    "property": "__count__invitations_sent"
+    "property": "__get__InvitationsRecieved"
   },{
     "principalType": "ROLE",
     "principalId": "$owner",
     "permission": "ALLOW",
-    "property": "__get__invitations_recieved"
+    "property": "__create__InvitationsRecieved"
   },{
     "principalType": "ROLE",
     "principalId": "$owner",
     "permission": "ALLOW",
-    "property": "__create__invitations_recieved"
+    "property": "__delete__InvitationsRecieved"
   },{
     "principalType": "ROLE",
     "principalId": "$owner",
     "permission": "ALLOW",
-    "property": "__delete__invitations_recieved"
+    "property": "__findById__InvitationsRecieved"
   },{
     "principalType": "ROLE",
     "principalId": "$owner",
     "permission": "ALLOW",
-    "property": "__findById__invitations_recieved"
+    "property": "__updateById__InvitationsRecieved"
   },{
     "principalType": "ROLE",
     "principalId": "$owner",
     "permission": "ALLOW",
-    "property": "__updateById__invitations_recieved"
+    "property": "__destroyById__InvitationsRecieved"
   },{
     "principalType": "ROLE",
     "principalId": "$owner",
     "permission": "ALLOW",
-    "property": "__destroyById__invitations_recieved"
-  },{
-    "principalType": "ROLE",
-    "principalId": "$owner",
-    "permission": "ALLOW",
-    "property": "__count__invitations_recieved"
+    "property": "__count__InvitationsRecieved"
   }],
   "methods": []
 }

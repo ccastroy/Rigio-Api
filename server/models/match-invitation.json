@@ -1,12 +1,12 @@
 {
-  "name": "Match_invitation",
+  "name": "MatchInvitation",
   "base": "PersistedModel",
   "idInjection": true,
   "options": {
     "validateUpsert": true
   },
   "properties": {
-    "status": {
+    "Status": {
       "type": "number",
       "required": true,
       "default": 0
@@ -14,20 +14,20 @@
   },
   "validations": [],
   "relations": {
-    "host": {
+    "Host": {
       "type": "belongsTo",
       "model": "user",
-      "foreignKey": "hostId"
+      "foreignKey": "HostId"
     },
-    "invitee": {
+    "Invitee": {
       "type": "belongsTo",
       "model": "user",
-      "foreignKey": "inviteeId"
+      "foreignKey": "InviteeId"
     },
-    "match": {
+    "Match": {
       "type": "belongsTo",
       "model": "Match",
-      "foreignKey": "matchId"
+      "foreignKey": "MatchId"
     }
   },
   "acls": [
@@ -36,18 +36,6 @@
       "principalType": "ROLE",
       "principalId": "$everyone",
       "permission": "DENY"
-    },
-    {
-      "accessType": "READ",
-      "principalType": "ROLE",
-      "principalId": "$authenticated",
-      "permission": "ALLOW"
-    },
-    {
-      "accessType": "WRITE",
-      "principalType": "ROLE",
-      "principalId": "$owner",
-      "permission": "ALLOW"
     }
   ],
   "methods": {}
