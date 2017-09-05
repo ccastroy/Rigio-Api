@@ -1,16 +1,16 @@
 {
-  "name": "Football_field",
+  "name": "FootballField",
   "base": "PersistedModel",
   "idInjection": true,
   "options": {
     "validateUpsert": true
   },
   "properties": {
-    "name": {
+    "Name": {
       "type": "string",
       "required": true
     },
-    "place_id": {
+    "PlaceId": {
       "type": "string",
       "required": true
     }

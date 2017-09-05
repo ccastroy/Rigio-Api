@@ -45,11 +45,11 @@
     "dataSource": "mysql",
     "public": true
   },
-  "Match_invitation": {
+  "MatchInvitation": {
     "dataSource": "mysql",
     "public": true
   },
-  "Football_field": {
+  "FootballField": {
     "dataSource": "mysql",
     "public": true
   }
