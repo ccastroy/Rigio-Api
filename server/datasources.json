@@ -1,7 +1,17 @@
 {
-  "mysql": {
+  "db": {
     "name": "db",
     "connector": "memory",
-    "file":"db.json"
+    "file": "db.json"
+  },
+  "mysql": {
+    "host": "localhost",
+    "port": 3306,
+    "url": "",
+    "database": "Rigio",
+    "password": "",
+    "name": "mysql",
+    "user": "root",
+    "connector": "mysql"
   }
 }

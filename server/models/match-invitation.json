@@ -1,12 +1,12 @@
 {
-  "name": "MatchInvitation",
+  "name": "matchInvitation",
   "base": "PersistedModel",
   "idInjection": true,
   "options": {
     "validateUpsert": true
   },
   "properties": {
-    "Status": {
+    "status": {
       "type": "number",
       "required": true,
       "default": 0
@@ -14,20 +14,20 @@
   },
   "validations": [],
   "relations": {
-    "Host": {
+    "host": {
       "type": "belongsTo",
       "model": "user",
-      "foreignKey": "HostId"
+      "foreignKey": "hostId"
     },
-    "Invitee": {
+    "invitee": {
       "type": "belongsTo",
       "model": "user",
-      "foreignKey": "InviteeId"
+      "foreignKey": "inviteeId"
     },
-    "Match": {
+    "match": {
       "type": "belongsTo",
-      "model": "Match",
-      "foreignKey": "MatchId"
+      "model": "match",
+      "foreignKey": "matchId"
     }
   },
   "acls": [

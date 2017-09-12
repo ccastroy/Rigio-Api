@@ -1,0 +1,26 @@
+{
+    "name": "userProfile",
+    "base": "Model",
+    "idInjection": false,
+    "properties": {
+      "name": {
+        "type": "string",
+        "required": true
+      },
+      "photo": {
+        "type": "string"
+      }
+    },
+    "validations": [],
+    "relations": {},
+    "acls": [
+      {
+        "accessType": "*",
+        "principalType": "ROLE",
+        "principalId": "$everyone",
+        "permission": "DENY"
+      }
+    ],
+    "methods": {}
+  }
+  

@@ -1,40 +1,40 @@
 {
-  "name": "Match",
+  "name": "match",
   "base": "PersistedModel",
   "idInjection": true,
   "options": {
     "validateUpsert": true
   },
   "properties": {
-    "Name": {
+    "name": {
       "type": "string",
       "required": true
     },
-    "Description": {
+    "description": {
       "type": "string"
     },
-    "MaxPlayers": {
+    "maxPlayers": {
       "type": "number",
       "required": true
     },
-    "Date": {
+    "date": {
       "type": "date",
       "required": true
     }
   },
   "validations": [],
   "relations": {
-    "Creator": {
+    "creator": {
       "type": "belongsTo",
       "model": "user",
       "foreignKey": ""
     },
-    "FootballField": {
+    "footballField": {
       "type": "belongsTo",
-      "model": "FootballField",
+      "model": "footballField",
       "foreignKey": ""
     },
-    "Members": {
+    "members": {
       "type": "hasAndBelongsToMany",
       "model": "user",
       "foreignKey": ""
