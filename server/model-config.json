@@ -41,16 +41,20 @@
     "dataSource": "mysql",
     "public": false
   },
-  "Match": {
+  "match": {
     "dataSource": "mysql",
     "public": true
   },
-  "MatchInvitation": {
+  "matchInvitation": {
     "dataSource": "mysql",
     "public": true
   },
-  "FootballField": {
+  "footballField": {
     "dataSource": "mysql",
     "public": true
+  },
+  "userProfile":{
+    "dataSource": null,
+    "public": false
   }
 }
