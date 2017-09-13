@@ -12,6 +12,11 @@ var FacebookTokenStrategy = require('passport-facebook-token');
 
 var flash = require('express-flash');
 
+app.use(loopback.token({
+  headers: ['access_token'],
+  model: 'accessToken',
+}));
+
 app.start = function() {
   // start the web server
   return app.listen(function() {
