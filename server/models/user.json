@@ -20,7 +20,7 @@
     },
     "matches": {
       "type": "hasMany",
-      "model": "Match",
+      "model": "match",
       "foreignKey": "creatorId"
     },
     "invitationsSent": {

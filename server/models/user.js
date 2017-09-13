@@ -14,12 +14,13 @@ module.exports = function(user) {
       , function(err, array) {
       var response = [];
       array.forEach(function(element) {
-        // brace yourself chanchada incoming
-        var felement = JSON.parse(JSON.stringify(element, null, 2));
+        var name  = element.__data.identities[0].__data.profile.displayName;
+        var photo = element.__data.identities[0].__data.profile.photos[0].value;
+        var id    = element.__data.id;
         response.push({
-          name: felement.identities[0].profile.displayName,
-          photo: felement.identities[0].profile.photos[0].value,
-          id: felement.id,
+          name: name,
+          photo: photo,
+          id: id,
         });
       }, this);
       cb(null, response);
